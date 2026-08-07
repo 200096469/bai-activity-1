@@ -21,10 +21,21 @@ h1 {
     margin-bottom: 20px;
 }
 
-#changeColourBtn {
+.changeColourBtn {
     padding: 15px 30px;
     font-size: 18px;
     background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resetColourBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff0000;
     color: white;
     border: none;
     border-radius: 5px;

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
+<!--Author: Roberto Palozzo-->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity 1 - Change Background Colour</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body id="pageBody">
-    <div class="container">
-        <h1>Activity 1</h1>
-        <p>Click the button below to change the background colour!</p>
-        <button id="changeColourBtn">Change Colour</button>
-        <p class="instructions">
-            <strong>Your Task:</strong> Write JavaScript to make this button change the background colour of the page when clicked.
-        </p>
-    </div>
 
-    <script src="main.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activity 1 - Change Background Colour</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body id="pageBody">
+        <div class="container">
+            <h1>Activity 1</h1>
+            <p>Click the button below to change the background colour!</p>
+            <p><label for="colour">Choose a colour:</label>
+            <input type="text" id="colour" placeholder="Write a colour here"></p>
+            <p><button class="changeColourBtn" onclick="changeColour()">Change Colour</button></p>
+            <p><button class="resetColourBtn" onclick="resetColour()">Reset</button></p>
+            <p>You have chosen: <span id="chosenColour"></span></p>
+            <p class="instructions">
+                <strong>Your Task:</strong> Write JavaScript to make this button change the background colour of the page when clicked.
+            </p>
+        </div>
+
+        <script src="activity.js"></script>
+    </body>
+
 </html>
