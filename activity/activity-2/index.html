@@ -10,24 +10,65 @@
     </head>
 
     <body id="pageBody">
+
         <div class="container">
-            <h1>Activity 1</h1>
+
+            <h1>
+                Activity 1
+            </h1>
+
             <p>Click the button below to change the background colour!</p>
-            <p><label for="colour">Choose a colour:</label>
-            <input type="text" id="colour" placeholder="Write a colour here"></p>
-            <p><label for="textColourValue">Text Colour:</label>
-            <input type="text" id="textColourValue" placeholder="Write a colour here"></p>
-            <p><button class="changeColourBtn" onclick="changeColour()">Change Colour</button>
-            <button class="randomColourBtn" onclick="randomColour()">Random Colour</button></p>
-            <p><button class="preset-btn" onclick="applyPreset('red')">Red Colour</button><button class="preset-btn" onclick="applyPreset('green')">Green Colour</button><button class="preset-btn" onclick="applyPreset('blue')">Blue Colour</button><button class="preset-btn" onclick="applyPreset('yellow')">Yellow Colour</button><button class="preset-btn" onclick="applyPreset('purple')">Purple Colour</button></p>
-            <p><button class="resetColourBtn" onclick="resetColour()">Reset</button></p>
-            <p>You have chosen: <span id="chosenColour"></span></p>
+            
+            <div class="space-betwin">
+                <label for="colour">Choose a colour:</label>
+                <input type="text" id="colour" placeholder="Write a colour here">
+            </div>
+
+            <div class="space-betwin">
+                <label for="textColourValue">Text Colour:</label>
+                <input type="text" id="textColourValue" placeholder="Write a colour here">
+            </div>
+
+            <div>
+                <label for="opacity">Opacity:</label>
+                <input type="range" id="opacity" min="0" max="100" value="100" oninput="updateOpacity()">
+            </div>
+            
+            <div class="space-betwin">
+                <button class="changeColourBtn" onclick="changeColour()">Change Colour</button>
+                <button class="randomColourBtn"  onclick="randomColour()">Random Colour</button>
+            </div>
+            
+            <div class="space-betwin">
+                <button class="preset-btn" style="background-color: red;" onclick="applyPreset('red')">Red Colour</button>
+                <button class="preset-btn" style="background-color: green;" onclick="applyPreset('green')">Green Colour</button>
+                <button class="preset-btn" style="background-color: blue;" onclick="applyPreset('blue')">Blue Colour</button>
+                <button class="preset-btn" style="background-color: yellow; color: purple;" onclick="applyPreset('yellow')">Yellow Colour</button>
+                <button class="preset-btn" style="background-color: purple;" onclick="applyPreset('purple')">Purple Colour</button>
+            </div>
+            
+            <div>
+                <button class="resetColourBtn" onclick="resetColour()">Reset</button>
+            </div>
+
+            <p>
+                You have chosen: <span id="chosenColour"></span>
+            </p>
+
+            <div id="currentSettings">
+                <p>Current Background Colour: <span id="currentColour"></span></p>
+                <p>Current Text Colour: <span id="currentTextColour"></span></p>
+                <p>Current Opacity: <span id="currentOpacity"></span>%</p>
+            </div>
+            
             <p class="instructions">
                 <strong>Your Task:</strong> Write JavaScript to make this button change the background colour of the page when clicked.
             </p>
+
         </div>
 
         <script src="activity.js"></script>
+
     </body>
 
 </html>
